@@ -58,6 +58,7 @@ The dataset is about **45211** bank customers which includes **17** features per
 
 ---
 ## Folder Structure
+``` tree
 banking-campaign-subscription-predictor/
 ├── 📁 data/                                                           # Datasets used for analysis
 │   ├── 📁 raw/                              
@@ -74,6 +75,7 @@ banking-campaign-subscription-predictor/
 │
 ├── README.md                                                           # Project overview and instructions
 └── LICENSE                                                             # License information
+```
 
 ---
 ## ⚙️ Methodology
