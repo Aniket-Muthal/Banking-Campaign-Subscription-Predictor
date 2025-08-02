@@ -21,12 +21,12 @@ To develop a machine learning pipeline that predicts customer responses to term 
 
 ## 🧾 Dataset Summary
 
-The dataset includes 17 features across:
+The dataset is about **45211** bank customers which includes **17** features per customer.
 
 ### 1. 👤 Client Info
 | Feature     | Description                         |
 |-------------|-------------------------------------|
-| age         | Customer’s age (numeric)            |
+| age         | Customer's age (numeric)            |
 | job         | Type of job                         |
 | marital     | Marital status                      |
 | education   | Education level                     |
@@ -57,10 +57,35 @@ The dataset includes 17 features across:
 | y       | Subscribed to deposit? (yes/no) |
 
 ---
+## Folder Structure
+banking-campaign-subscription-predictor/
+├── 📁 data/                                                           # Datasets used for analysis
+│   ├── 📁 raw/                              
+│       └── bank_call_data.csv                                          # Original Dataset
+|                        
+|   ├── 📁 processed/ 
+│       └── data.csv                                                    # Datset retained for reference
+|       └── data_basic_cleaning.csv                                     # Cleaned Dataset
+|       └── data_eda.csv                                                # Dataset preserved exclusively for EDA
+|
+├── 📁 notebooks/                                                       
+│   └── 01_data_cleaning_and_eda.ipynb                                  # Data Cleaning and EDA notebook
+|   └── 02_feature_engineering_and_model_training_evaluation.ipynb      # Feature Engineering and modeling notebook
+│
+├── README.md                                                           # Project overview and instructions
+└── LICENSE                                                             # License information
+
+---
+## ⚙️ Methodology
+
+1. Exploratory Data Analysis
+2. Data Cleaning & Feature Engineering
+3. Model Building & Evaluation
 
 ## ⚙️ Pipeline Architecture
 
-- **Preprocessing**
+- **Data Cleaning & Preprocessing**
+  - Basic Data Cleaning
   - Encode categoricals (One-Hot/Ordinal)
   - Handle missing features gracefully
   - Feature scaling
@@ -138,14 +163,17 @@ This model strikes a **practical balance** between expanding outreach and minimi
 
 ## 🛠 Tech Stack
 
-- Python 3.x
-- scikit-learn, pandas, numpy
-- imbalanced-learn (SMOTE)
-- XGBoost, SHAP
-- matplotlib, seaborn
+- **Languages**: Python 3.x
+- **Libraries**:
+    - Data Handling: `pandas`, `numpy`
+    - Visualization: `matplotlib`, `seaborn`
+    - Modeling: `scikit-learn`, `xgboost`
+    - Evaluation: `classification_report`, `confusion_matrix`, `roc_auc_score`
+- **Techniques**: imbalanced-learn (`SMOTE`)
+- **ML Algorithms**: `XGBoost`, `Random Forest`, `Gradient Boost`, `Decision Tree`, `Logistic Regression`
+- **Environment**: `Jupyter Notebook`
 
 ---
-
 ## 🤝 Contributing
 
 Contributions for model enhancements, interpretability features, or business-aligned optimizations are welcome. Feel free to open a PR or drop suggestions!
